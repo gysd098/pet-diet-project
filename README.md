@@ -1,24 +1,111 @@
-# pet-diet-project
+# 🐶 Project Title: Pet-diet-plan
 
-### intro
-- 사료만 먹는 강아지들이 불쌍해서 다양한 맛을 느끼게 해주고 싶어서 
-- 사료의 재료가 투명하지 않아서 
-- 주인 눈으로 확인하고 건강한 재료만 먹이고 싶을 때
-- 반려동물 특성(나이, 알러지, 질병 등)에 따른 칼로리 계산 및 맞춤 식단 추천하는 웹앱 프로그램 만들기
+## 🧠 Why I Built This
+- ✅ I feel bad for my dog because he only eats dry feed.
+- ✅ Because the feed contains unclear ingridients and I want to take care of their disease together
+- ✅ I want to make a perfect meal plan that it doesn't contain any food that dog has allergies
+---
+## 🎯 Goal 
+Create an interactive web application that: 
+- Calorie counting
+- Based on Calorie, a meal plan for a dog
+- Excluding allergenic foods and ingridients that are harmful to the body
+- Dog raising tips
+---
+## 🔍 Key Features
 
-### Skills 
-- Python
-- Streamlit
+- 📝 Input: name, age, weight, activity level, allergies, diseases
+- 🔢 Automatic calculation of:
+  - RER (Resting Energy Requirement)
+  - MER (Maintenance Energy Requirement)
+  - Macronutrient grams (protein, carbs)
+- ❌ Allergy filter for safe protein options
+- 🍽 Meal recommendation with portion sizes
+- 💡 Bonus tab: pet wellness tips (vaccination, omega-3, Heimlich, etc.)
+---
+## 🧩 Design Overview
 
-### 제공하는 기능 
-- 반려동물 정보 입력 (이름, 나이, 무게, 알러지, 질병 등)
-- 1일 섭취 칼로리 계산
-- 추천 식단 제공
-- 알러지 주의 사항
-- 병력에 따른 식단추천 제공
+### 🧑‍💻 User Flow
 
+1. Input pet details: name, age, weight, neutering status, pregnancy, activity level
+2. Select known allergies
+3. Select existing health conditions (e.g., arthritis, diabetes, kidney disease)
+4. Click “Recommend Diet”
+5. View:
+   - Daily calorie needs (MER)
+   - Macronutrient breakdown (g of protein and carbs)
+   - Randomized food recommendation (filtered by allergy)
+   - Pet care tips (in separate tab)
+---
+### ⚙️ Logic
 
-### input
-- 반려동물의 이름, 나이, 몸무게, 활동량, 알러지, 질병
+- **MER (Maintenance Energy Requirement)** is calculated using standard veterinary BMR formula and activity factor (AF)
+- **Macronutrient ratio** varies depending on selected diseases (see: `disease_diet_profiles`)
+- **Random ingredient selector** excludes allergenic proteins
+- **Snacks** are randomly selected from veggie or fruit snacks
+- Separate tab provides helpful pet care advice
 
+---
+## ⚙️ Tech Stack
+| Technology | Purpose                             |
+|------------|-------------------------------------|
+| Python     | Core logic and calculations         |
+| Streamlit  | UI & interaction framework          |
 
+---
+## 🧪 Sample Input & Output
+
+**Sample Input:**
+- Name: Louie
+- Age: 3 years (36 months)
+- Weight: 6.5 kg
+- Neutered: Yes
+- Activity: Medium (1–2 hours walking)
+- Allergies: Chicken
+- Diseases: Arthritis
+
+**Output:**
+- Caloric Needs (MER): 480 kcal
+- Recommended Protein: Salmon, 30g
+- Recommended Carbs: Brown Rice, 40g
+- Recommended Snack: Green Beans
+---
+## 🚀 How to Run
+
+```bash
+# 1. Install dependencies
+pip install streamlit
+
+# 2. Run the app
+streamlit run pet_diet_main.py
+```
+---
+## 📈 Future Improvements
+
+- 🐱 Add support for cats
+- 🛒 Show ingredient prices from online stores via API
+- 🖨 Add PDF meal plan export
+- 📊 Visualize macro breakdown with pie charts
+
+---
+
+## 📚 What I Learned
+
+- Built a fully functional interactive app using Streamlit
+- Applied real-world veterinary nutrition logic in code
+- Handled multi-input conditions and real-time feedback
+- Designed a simple yet user-friendly experience for pet owners
+
+---
+
+## 🌱 One-Line Summary
+
+**An interactive tool to make your dog’s meals healthier, safer, and more personalized – built with code and care.**
+
+---
+
+## 🙋 About the Developer
+
+I'm a student at an ABCIS who loves animals and solving problems with code.
+
+This project reflects both my creativity and desire to apply what I’ve learned to improve everyday life—for both humans and pets 🐶.
