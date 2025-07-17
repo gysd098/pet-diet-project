@@ -24,6 +24,11 @@ Create an interactive web application that:
 - 💡 Bonus tab: pet wellness tips (vaccination, omega-3, Heimlich, etc.)
 
 ## 🧩 Design Overview
+![snapshot1](./project_snapshot1.png)
+
+![snapshot2](./project_snapshot2.png)
+
+![snapshot3](./project_snapshot3.png)
 
 ### 🧑‍💻 User Flow
 
